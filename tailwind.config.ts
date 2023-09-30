@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
-const rotateX = plugin(function ({ addUtilities }) {
-  addUtilities({
-    ".rotate-y-180": {
-      transform: "rotateY(180deg)",
-    },
-  });
-});
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -45,7 +39,7 @@ module.exports = {
       animation: {
         "spin-slow": "spin 5s linear infinite",
       },
-      typography: ({ theme }) => ({
+      typography: ({ theme }: any) => ({
         DEFAULT: {
           css: {
             color: theme("colors.gray"),
@@ -57,7 +51,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/line-clamp"),
-    rotateX,
+
     require("@tailwindcss/typography"),
     require("tailwindcss-animated"),
   ],
