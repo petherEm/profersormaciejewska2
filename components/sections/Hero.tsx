@@ -27,7 +27,7 @@ const Hero = () => {
                 <img src="/assets/images/consulting/banner-icon3.svg" alt="" />
               </div>
             </div>
-            <Link href="/contact-us" className="btn rounded-md bg-white">
+            <Link href="/" className="btn rounded-md bg-white">
               Kontakt
             </Link>
           </div>
